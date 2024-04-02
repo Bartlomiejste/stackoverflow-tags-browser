@@ -25,7 +25,8 @@ First, clone this repository to your local machine:
 - cd stackoverflow-tags-browser
 
 ### Installing Dependencies
-Use npm ci to install the project dependencies. This command ensures that you install the exact versions of packages defined in package-lock.json.
+Use npm ci to install the project dependencies. This command ensures that you install the exact versions of packages defined in package-lock.json:
+- npm ci
 
 ### Running the Application
 To start the application in development mode, run:
