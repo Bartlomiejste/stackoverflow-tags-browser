@@ -34,7 +34,7 @@ After executing this command, the application should be accessible at http://loc
 
 ### Running Storybook
 To start Storybook and view the project's components, run:
--npm run storybook
+- npm run storybook
 Storybook will be available at http://localhost:6006.
 
 Support
