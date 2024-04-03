@@ -9,7 +9,6 @@ This project is built with:
 - React.js
 - Material UI (MUI)
 - Axios for data fetching
-- Redux Toolkit / React Query (depending on the chosen state management method)
 - Storybook for component visualization
 
 ## Getting Started
