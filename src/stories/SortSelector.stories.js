@@ -6,7 +6,7 @@ export default {
   component: SortSelector,
   argTypes: {
     selectedSort: {
-      control: "select",
+      control: "radio",
       options: ["name", "popular", "activity"],
     },
     selectedOrder: {
