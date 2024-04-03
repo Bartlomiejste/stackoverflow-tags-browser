@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.stackexchange.com/2.2/tags";
+const BASE_URL = "https://api.stackexchange.com/2.3/tags";
 const SITE = "stackoverflow";
 
 export const fetchTags = async (page, pageSize, sort) => {

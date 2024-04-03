@@ -1,26 +1,31 @@
 import React from 'react';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import { FormControl, InputLabel, Select, MenuItem, Grid } from '@mui/material';
 
-function SortSelector({ selectedSort, onSortChange }) {
+function SortSelector({ selectedSort, onSortChange, selectedOrder, onOrderChange }) {
     return (
-        <FormControl variant="outlined" size="small" style={{ minWidth: 200, marginRight: 15 }}>
-            <InputLabel id="sort-selector-label">Sort By</InputLabel>
-            <Select
-                labelId="sort-selector-label"
-                id="sort-selector"
-                value={selectedSort}
-                onChange={onSortChange}
-                label="Sort By"
-            >
-                <MenuItem value="popular">Popular</MenuItem>
-                <MenuItem value="activity">Activity</MenuItem>
-                <MenuItem value="name">Name</MenuItem>
-            </Select>
-        </FormControl>
+        <Grid container spacing={2}>
+            <Grid item>
+                <FormControl variant="outlined" size="small" style={{ minWidth: 120 }}>
+                    <InputLabel>Sort By</InputLabel>
+                    <Select value={selectedSort} onChange={onSortChange} label="Sort By">
+                        <MenuItem value="name">Name</MenuItem>
+                        <MenuItem value="popular">Popular</MenuItem>
+                        <MenuItem value="activity">Activity</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item>
+                <FormControl variant="outlined" size="small" style={{ minWidth: 120 }}>
+                    <InputLabel>Order</InputLabel>
+                    <Select value={selectedOrder} onChange={onOrderChange} label="Order">
+                        <MenuItem value="asc">Ascending</MenuItem>
+                        <MenuItem value="desc">Descending</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
+        </Grid>
     );
 }
+
 
 export default SortSelector;
