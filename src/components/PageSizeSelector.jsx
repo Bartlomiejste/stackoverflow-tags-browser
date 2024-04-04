@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TagContext } from '../context/TagContext';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-function PageSizeSelector({ pageSize, onPageSizeChange }) {
-  const pageSizes = [5, 10, 15, 20, 25, 30];
+const pageSizes = [5, 10, 15, 20, 25, 30];
+
+function PageSizeSelector() {
+  const { pageSize, setPageSize } = useContext(TagContext);
 
   return (
     <FormControl variant="outlined" size="small" sx={{ minWidth: 120 }}>
@@ -14,7 +17,7 @@ function PageSizeSelector({ pageSize, onPageSizeChange }) {
         labelId="page-size-select-label"
         id="page-size-select"
         value={pageSize}
-        onChange={onPageSizeChange}
+        onChange={(e) => setPageSize(e.target.value)}
         label="Page Size"
       >
         {pageSizes.map((size) => (

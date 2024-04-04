@@ -1,5 +1,6 @@
 import React from "react";
 import SortSelector from "../components/SortSelector";
+import TagProvider from "../context/TagContext";
 
 export default {
   title: "Components/SortSelector",
@@ -14,6 +15,13 @@ export default {
       options: ["asc", "desc"],
     },
   },
+  decorators: [
+    (Story) => (
+      <TagProvider>
+        <Story />
+      </TagProvider>
+    ),
+  ],
 };
 
 const Template = (args) => <SortSelector {...args} />;

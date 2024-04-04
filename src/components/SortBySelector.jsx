@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TagContext } from '../context/TagContext';
 import { FormControl, InputLabel, Select, MenuItem, Grid } from '@mui/material';
 
-function SortBySelector({ selectedSort, onSortChange }) {
+function SortBySelector() {
+    const { sort, setSort } = useContext(TagContext);
+
     return (
         <Grid item>
             <FormControl variant="outlined" size="small" sx={{ minWidth: 120 }}>
                 <InputLabel>Sort By</InputLabel>
-                <Select value={selectedSort} onChange={onSortChange} label="Sort By">
+                <Select value={sort} onChange={(e) => setSort(e.target.value)} label="Sort By">
                     <MenuItem value="name">Name</MenuItem>
                     <MenuItem value="popular">Popular</MenuItem>
                     <MenuItem value="activity">Activity</MenuItem>

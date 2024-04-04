@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import PageSizeSelector from "../components/PageSizeSelector";
+import TagProvider from "../context/TagContext";
 
 export default {
   title: "Components/PageSizeSelector",
   component: PageSizeSelector,
+  decorators: [
+    (Story) => (
+      <TagProvider>
+        <Story />
+      </TagProvider>
+    ),
+  ],
 };
 
 const Template = (args) => {
