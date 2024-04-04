@@ -25,5 +25,5 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   pageSize: 10,
-  onPageSizeChange: (newSize) => console.log(`Nowy pageSize: ${newSize}`),
+  onPageSizeChange: (newSize) => console.log(`New pageSize: ${newSize}`),
 };
